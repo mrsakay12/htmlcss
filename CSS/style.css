@@ -1,0 +1,109 @@
+body {
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.page-wrapper {
+    max-width: 1024px;
+    background-color: #84d6e4;
+    margin: 0 auto;
+    padding: 15px;
+    border-radius: 20px;
+
+}
+header {
+    height: 50px;
+    width: 100%;
+    background-color: rgb(22, 107, 107);
+    position: fixed;
+    right:0px;
+    left:0px;
+    top: 0px;
+
+}
+.Banner {
+    height: 200px;
+    background-image: url('../Images/banner.JPG');
+    background-size: cover;
+    background-position: bottom;
+}
+
+h1 {
+    color: whitesmoke;
+    text-shadow: 4px 4px 7px black;
+    text-align: center;
+    padding-top: 20px;
+    font-size: 45px;
+}
+
+h2 {
+    color: whitesmoke;
+    text-shadow: 2px 2px 5px black;
+    text-align: center;
+    font-size: 25px;
+}
+
+section.About-me{
+  margin-top: 80px;
+  margin-bottom: 40px;
+
+}
+.About-me p {
+    font-size: 16px;
+    line-height: 30px;
+    text-align: justify;
+}
+
+.idpic{
+    float: left;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius:50px;
+    height: 170px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+h3 {
+    text-align: center;
+    text-shadow: 2px 2px 5px rgb(57, 68, 230);
+}
+
+ul {
+    display: inline-block;
+    text-align: left;
+  }
+
+section.work-education {
+    text-align: center;
+}
+
+.d-flex{
+    display: flex;
+    background-color: aquamarine;
+
+}
+.d-flex>.d-inline{
+    display: inline-block;
+    background-color: whitesmoke;
+    width: 180px;
+    padding: 15px;
+    margin: 15px;
+    border-radius:5px;
+
+}
+section.my-portfolio div.d-flex{
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: rgb(126, 206, 206);
+    border-radius:10px;
+}
+
+
+
+
+
+
+
+ 
