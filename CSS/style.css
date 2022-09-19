@@ -100,10 +100,118 @@ section.my-portfolio div.d-flex{
     border-radius:10px;
 }
 
-
-
-
-
-
-
+.page-wrapper1 {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 5px;
  
+
+}
+
+.basic-grid {
+    display: grid;
+    grid-template-columns: auto auto auto ;
+    background-color: rgb(120, 224, 35);
+    gap: 5px;
+    padding: 5px;
+    border: 1px solid black;
+    
+
+
+}
+
+.basic-grid>div,
+.advance-grid>div,
+.grid-columnrow>div,
+.grid-area>div{
+    border: 1px solid black;
+    text-align: center;
+    line-height: 60px;
+    background-color: azure;
+}
+
+.basic-grid .item1{
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.basic-grid .item6{
+    grid-column-start: 2;
+    grid-column-end: 4;
+}
+
+
+.basic-grid .item5{
+    grid-row: 2/4;
+}
+
+.advance-grid {
+    display: grid;
+    grid-template-columns: auto auto auto  auto auto;
+    background-color: rgb(95, 231, 255);
+    gap: 5px;
+    padding: 5px;
+    border: 1px solid black;
+}
+.advance-grid .item7{
+    grid-area: 1 / 2 / 3 / 5 ;
+    /* grid area : row start / column start / row end / column end */
+
+}
+.advance-grid .item5{
+    grid-area: 3 / 3 / 5/ 5 ;
+
+}
+
+#grid h2 {
+    color: hsl(236, 85%, 46%);
+    text-shadow: 1px 1px 5px rgb(80, 230, 137);
+    text-align: center;
+    font-size: 35px;
+}
+.grid-columnrow {
+    display: grid;
+    grid-template-columns: auto auto auto  auto ;
+    background-color: rgb(231, 203, 76);
+    gap: 5px;
+    padding: 5px;
+    border: 1px solid black;
+}
+.grid-columnrow .item1{
+    grid-row: 1/3;
+}
+.grid-columnrow .item3{
+    grid-column: 3/5;
+}
+.grid-columnrow .item8{
+    grid-column: 3/5;
+}
+.grid-columnrow .item10{
+    grid-row: 3/5;
+}
+
+.grid-area {
+    display: grid;
+    grid-template-columns: auto auto auto  auto auto auto ;
+    background-color: rgb(231, 103, 44);
+    gap: 5px;
+    padding: 5px;
+    border: 1px solid black;
+}
+
+.grid-area .item5 {
+    grid-column: 5/7;
+    background-color: yellowgreen;
+}
+.grid-area .item8 {
+    grid-area: 2 / 2 / 5 / 4 ;
+    /* grid area : row start / column start / row end / column end */
+    background-color: aquamarine;
+}
+.grid-area .item9 {
+    grid-area: 2 / 4  / 5 / 6 ;
+    background-color: aqua;
+}
+
+
+
