@@ -14,13 +14,16 @@ body {
 header {
     height: 50px;
     width: 100%;
-    background-color: rgb(22, 107, 107);
+    background-color: rgb(51, 141, 141);
     position: fixed;
     right:0px;
     left:0px;
     top: 0px;
-
+    text-align: center;
+    font-size: large;
+ 
 }
+
 .Banner {
     height: 200px;
     background-image: url('../Images/banner.JPG');
@@ -212,6 +215,54 @@ section.my-portfolio div.d-flex{
     grid-area: 2 / 4  / 5 / 6 ;
     background-color: aqua;
 }
+
+.navbar ul {
+    display: inline-block;
+    list-style-type: none;
+    margin: 0px;
+
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: white;
+    line-height: 50px;
+  }
+
+  .navbar ul li:hover{
+    background-color: #333333cc;
+    
+  }
+.navbar ul li:hover a{
+    color: rgb(53, 231, 18);
+    text-shadow: 2px 2px 5px blue;
+    
+  }
+
+  .navbar ul li {
+    display: inline-block;
+    padding: 0 10px;
+
+  }
+  
+@media screen and (max-width:992px){
+    header{
+        position: absolute;
+        height: auto;
+        background-color: #333333cc;
+        text-align: left;
+    }
+        
+    .navbar ul li{
+            display: block;
+    }
+    .Banner{
+            margin-top:240px;
+    }
+
+    }
+
+
 
 
 
