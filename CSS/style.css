@@ -12,7 +12,7 @@ body {
 
 }
 header {
-    height: 50px;
+    height: 60px;
     width: 100%;
     background-color: rgb(51, 141, 141);
     position: fixed;
@@ -21,6 +21,8 @@ header {
     top: 0px;
     text-align: center;
     font-size: large;
+    z-index: 9999;
+    justify-content: center;
  
 }
 
@@ -29,6 +31,9 @@ header {
     background-image: url('../Images/banner.JPG');
     background-size: cover;
     background-position: bottom;
+    margin-top:50px;
+    border-radius: 20px;
+
 }
 
 h1 {
@@ -46,11 +51,8 @@ h2 {
     font-size: 25px;
 }
 
-section.About-me{
-  margin-top: 80px;
-  margin-bottom: 40px;
 
-}
+
 .About-me p {
     font-size: 16px;
     line-height: 30px;
@@ -118,9 +120,6 @@ section.my-portfolio div.d-flex{
     gap: 5px;
     padding: 5px;
     border: 1px solid black;
-    
-
-
 }
 
 .basic-grid>div,
@@ -226,24 +225,26 @@ section.my-portfolio div.d-flex{
 .navbar ul li a{
     text-decoration: none;
     color: white;
-    line-height: 50px;
-  }
+    line-height: 35px;
+}
 
-  .navbar ul li:hover{
+.navbar ul li:hover{
     background-color: #333333cc;
     
-  }
+}
 .navbar ul li:hover a{
     color: rgb(53, 231, 18);
     text-shadow: 2px 2px 5px blue;
-    
-  }
+    line-height: 50px;
 
-  .navbar ul li {
+    
+}
+
+.navbar ul li {
     display: inline-block;
     padding: 0 10px;
 
-  }
+}
   
 @media screen and (max-width:992px){
     header{
@@ -260,9 +261,64 @@ section.my-portfolio div.d-flex{
             margin-top:240px;
     }
 
-    }
+}
 
 
 
+.card-text {
+    text-align: left; 
+}
+
+.col>p{
+
+    font-style: italic;
+ 
+}
+
+.col>h5,
+.col>h6 {
+    font-family: Courier New, monospace;
+
+ 
+}
+
+.card-body{
+    border-radius: 10px;
+    background-color: rgb(157, 233, 243);
+}
+
+.navbar {
+    justify-content: center;
+}
+
+.container>.row>.col.text-end {
+    border-right: 3px solid #34a9ca;
+
+}
+.container>.row>.order-last {
+    border-left: 3px solid #34a9ca;
+    text-align: left;
+
+}
+
+.col.text-end::After,
+.col.order-last::after{
+    content: "\2666";
+    font-size: 42px;
+    color:#34a9ca;
+    position:relative;
+    right: -24px;
+    top: -129px;
+}
+.col.order-last::after{
+    left: -24px;
+ 
+}
+
+table, th, td{
+    border: 1px solid rgb(82, 79, 79) ;
+    text-align: center;
+  
+}
 
 
