@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>JavaSrcipt</title>
+    <script type="text/javascript" src="JS/kodego.js"></script>
+    </head>
+    <body>
+
+    <input type="number" id="first_num" value="" placeholder="X" />
+    <input type="number" id="second_num" value="" placeholder="Y" />
+
+    <button onclick="doCheck()"> do check</button>
+    <div id="result"></div>
+    <script>
+
+        function doCheck(){
+            let x = parseInt(document.getElementById('first_num').value);
+            let y = parseInt(document.getElementById('second_num').value);
+            
+            if(x == y){
+                document.getElementById('result').innerHTML = "Value" + x + " is equal Than Y";
+            }else if(x > y){
+                document.getElementById('result').innerHTML = "X is greater Than Y";
+            }else{
+                document.getElementById('result').innerHTML = "X is less Than Y";
+            }
+        }
+        console.log("doCheck()")
+    </script>
+
+
+    </body>
+</html>

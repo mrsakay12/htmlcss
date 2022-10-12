@@ -91,7 +91,8 @@ section.work-education {
 }
 .d-flex>.d-inline{
     display: inline-block;
-    background-color: whitesmoke;
+    background: rgb(174,202,238);
+    background: linear-gradient(90deg, rgba(174,202,238,1) 0%, rgba(148,233,203,1) 100%);
     width: 180px;
     padding: 15px;
     margin: 15px;
@@ -321,4 +322,9 @@ table, th, td{
   
 }
 
+#result,
+#result1 {
+   font-size: 16px;
+   color: blue;
+}
 
