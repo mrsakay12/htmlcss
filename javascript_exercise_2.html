@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Hands on JavaScript 2</title>
+    <script type="text/javascript" src="JS/kodego.js"></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+    <script src="js/bootstrap.min.js" type="javasript"></script>
+    <link href="css/style.css" rel="stylesheet">
+    <script src="js/kodego.js" type="javasript"></script>
+
+    </head>
+    <body >
+         <!-- Machine 1 -->
+    <div class="container justify-content-center border-secondary mt-3">
+    <h2 style="text-align:left ; color: black;">Hands on JavaScript 2</h2>
+    <h3 class="h5 mt-3" style="text-align:left ; color: black;">Machine Problem 1 </h3>
+
+   <input type="text" id="alphabet" value="" placeholder="Type alphabet" maxlength="1" />
+   <button onclick="doCheck1()"> Do Check</button>
+   <div id="result1"></div>
+   
+<script>
+   function doCheck1(){
+    let alphabet = document.getElementById("alphabet").value;
+    document.getElementById("result1").innerHTML = alphabet + " is " + checkAlpha();
+    console.log("doCheck1()")
+  }
+</script>
+
+  <!-- Machine 2 -->
+
+  <h3 class="h5 mt-5" style="text-align:left ; color: black;">Machine Problem 2 </h3>
+  <input type="Number" id="number1" value="" placeholder="Type Number" />
+  <input type="Number" id="number2" value="" placeholder="Type Number" />
+
+<div>
+    Operators:
+</div>
+
+  <button id="operator" value="+" > + </button>
+  <button id="operator1" value="-" > - </button>
+  <button value="*">  * </button>
+  <button value="/"> / </button>
+  
+
+  <div class="container mt-2">
+</select>
+    Results:
+  <button id="equal" value="=" onclick="Calculate()"> = </button> 
+
+ <p id="result4"></p>
+</div>
+
+  <script>
+ function Calculate() {
+
+    let number1 = document.getElementById("number1").value;
+    let number2 = document.getElementById("number2").value;
+    let operator = document.getElementById("operator").value;
+    let operator1 = document.getElementById("operator1").value;
+
+    switch (operator) {
+    case "+":
+        result =  parseInt(number1) + parseInt(number2) ;
+        document.getElementById('result4').innerHTML = "The sum of " + number1 + " and " + number2 + " is " + result;
+        break;
+    case "-":
+        
+        result =  parseInt(number1) - parseInt(number2) ;
+        document.getElementById('result4').innerHTML = "The difference between " + number1 + " and " + number2 + " is " + result;
+        break;
+    case '*':
+        result =  parseInt(number1) * parseInt(number2) ;
+        document.getElementById('result4').innerHTML = result;
+        break;
+     case '/':
+        result =  parseInt(number1) / parseInt(number2) ;
+        document.getElementById('result4').innerHTML = result;
+        break;
+    default:
+ 
+        document.getElementById('result4').innerHTML = Error;
+        break;
+    }
+  
+ }
+
+  </script>
+
+
+
+</div>
+    </body>
+</html>
