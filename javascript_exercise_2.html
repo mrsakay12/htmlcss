@@ -34,7 +34,7 @@
   <input type="Number" id="number2" value="" placeholder="Type Number" />
 
 <div>
-    Operators:
+  <p id="ops"> Operators: <p id="ops"></p>
 </div>
   <div  id="operator" ></div>
   <button  onclick="add()"> + </button>
@@ -89,18 +89,22 @@
     function add()
     {
         document.getElementById('operator').value = "+";
+        document.getElementById('ops').innerHTML = " Operators: Addition";
     }
     function minus()
     {
         document.getElementById('operator').value = "-";
+        document.getElementById('ops').innerHTML = " Operators: Subtraction";
     }
     function multiply()
     {
         document.getElementById('operator').value = "*";
+        document.getElementById('ops').innerHTML = " Operators: Multiplication";
     }
     function divide()
     {
         document.getElementById('operator').value = "/";
+        document.getElementById('ops').innerHTML = " Operators: Division";
     }
 
 
