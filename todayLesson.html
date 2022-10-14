@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>SWITCH CASE</title>
+    <script type="text/javascript" src="JS/kodego.js"></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+    <script src="js/bootstrap.min.js" type="javasript"></script>
+    <link href="css/style.css" rel="stylesheet">
+    <script src="js/kodego.js" type="javasript"></script>
+
+    </head>
+    <body>
+        <div class="container mt-5">
+        <h3 style="text-align:left">SWITCH CASE</h3>
+
+       <input  type="text" id="flower" value=""  onkeyup="onkeyupHandler()"/>
+       <div id="result1"></div>
+
+       
+       <input  type="text" id="monthName" value=""  onkeyup="onkeyMonthdays()"/>
+       <div id="result2"></div>
+  
+        <script>
+        
+    function onkeyupHandler() {
+        let flower = document.getElementById("flower").value;
+        document.getElementById("result1").innerHTML = flower + " are " + getflower(flower);
+    
+    }
+         
+    function onkeyMonthdays() {
+        let monthName = document.getElementById("monthName").value;
+        document.getElementById("result2").innerHTML = monthName + " is " + getCalendarMonthDays(monthName);
+    
+    }
+        </script>
+        
+<div class="date mt-5" >
+    <h3 style="text-align:left"> Date </h3>
+    <input type="date" onchange="getWeekDayName(event)"/>
+        <div id="result6"></div>
+        <div id="result7"></div>
+
+        <script>
+
+            function getWeekDayName(e){
+                let date = new Date(e.currentTarget.value);
+                let day = date.getDay();
+                let month = date.getMonth();
+
+                switch(day){
+                    case 0:
+                        document.getElementById("result6").innerHTML = "Sunday";
+                        break;
+                    case 1: 
+                        document.getElementById("result6").innerHTML = "Monday";
+                        break;
+                    case 2: 
+                        document.getElementById("result6").innerHTML = "Tuesday";
+                        break;
+                    case 3: 
+                        document.getElementById("result6").innerHTML = "Wednesday";
+                        break;
+                    case 4: 
+                        document.getElementById("result6").innerHTML = "Thursday";
+                        break;
+                    case 5: 
+                        document.getElementById("result6").innerHTML = "Friday";
+                        break;
+                    case 6: 
+                        document.getElementById("result6").innerHTML = "Saturday";
+                        break;
+                    default:
+                        document.getElementById("result6").innerHTML = "Unknown date value";
+                        break;
+                }
+                switch(month){
+                    case 0:
+                        document.getElementById("result7").innerHTML = "January";
+                        break;
+                    case 1: 
+                        document.getElementById("result7").innerHTML = "February";
+                        break;
+                    case 2: 
+                        document.getElementById("result7").innerHTML = "March";
+                        break;
+                    case 3: 
+                        document.getElementById("result7").innerHTML = "April";
+                        break;
+                    case 4: 
+                        document.getElementById("result7").innerHTML = "May";
+                        break;
+                    case 5: 
+                        document.getElementById("result7").innerHTML = "June";
+                        break;
+                    case 6: 
+                        document.getElementById("result7").innerHTML = "July";
+                        break;
+                    case 7: 
+                        document.getElementById("result7").innerHTML = "August";
+                        break;
+                    case 8: 
+                        document.getElementById("result7").innerHTML = "September";
+                        break;
+                    case 9: 
+                        document.getElementById("result7").innerHTML = "October";
+                        break;
+                    case 10: 
+                        document.getElementById("result7").innerHTML = "November";
+                        break;
+                    case 11: 
+                        document.getElementById("result7").innerHTML = "December";
+                        break;
+                    default:
+                        document.getElementById("result7").innerHTML = "Unknown month value";
+                        break;
+                }
+            }
+        </script>
+</div>
+
+</div>
+    </body>
+</html>
