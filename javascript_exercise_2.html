@@ -36,17 +36,17 @@
 <div>
     Operators:
 </div>
-
-  <button id="operator" value="+" > + </button>
-  <button id="operator1" value="-" > - </button>
-  <button value="*">  * </button>
-  <button value="/"> / </button>
+  <div  id="operator" ></div>
+  <button  onclick="add()"> + </button>
+  <button  onclick="minus()"> - </button>
+  <button  onclick="multiply()">  *</button>
+  <button onclick="divide()"> / </button>
   
 
   <div class="container mt-2">
 </select>
     Results:
-  <button id="equal" value="=" onclick="Calculate()"> = </button> 
+  <button  onclick="Calculate()"> = </button> 
 
  <p id="result4"></p>
 </div>
@@ -57,37 +57,54 @@
     let number1 = document.getElementById("number1").value;
     let number2 = document.getElementById("number2").value;
     let operator = document.getElementById("operator").value;
-    let operator1 = document.getElementById("operator1").value;
-
+  
+   
     switch (operator) {
     case "+":
         result =  parseInt(number1) + parseInt(number2) ;
-        document.getElementById('result4').innerHTML = "The sum of " + number1 + " and " + number2 + " is " + result;
+        document.getElementById('result4').innerHTML = "The sum is " + result;
         break;
     case "-":
         
         result =  parseInt(number1) - parseInt(number2) ;
-        document.getElementById('result4').innerHTML = "The difference between " + number1 + " and " + number2 + " is " + result;
+        document.getElementById('result4').innerHTML = "The difference is " + result;
         break;
-    case '*':
+    case "*":
+        document.getElementById("operator").value = "*";
         result =  parseInt(number1) * parseInt(number2) ;
-        document.getElementById('result4').innerHTML = result;
+        document.getElementById('result4').innerHTML = "The product is " + result;
         break;
      case '/':
         result =  parseInt(number1) / parseInt(number2) ;
-        document.getElementById('result4').innerHTML = result;
+        document.getElementById('result4').innerHTML = "The quotient is " + result;
         break;
     default:
- 
-        document.getElementById('result4').innerHTML = Error;
+        document.getElementById('result4').innerHTML = "0";
         break;
     }
   
  }
 
+
+    function add()
+    {
+        document.getElementById('operator').value = "+";
+    }
+    function minus()
+    {
+        document.getElementById('operator').value = "-";
+    }
+    function multiply()
+    {
+        document.getElementById('operator').value = "*";
+    }
+    function divide()
+    {
+        document.getElementById('operator').value = "/";
+    }
+
+
   </script>
-
-
 
 </div>
     </body>
