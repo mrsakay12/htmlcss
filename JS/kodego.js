@@ -48,8 +48,41 @@ function checkAlpha(){
         default:
             return "consonant";
     }
+  }
+
+function numberCounter(counter,maxvalue,targetdisplay){
+  while(counter <= maxvalue){
+    if(targetdisplay.innerHTML != ""){
+      targetdisplay.innerHTML += " , ";
+    }
+     targetdisplay.innerHTML += counter ;
+     counter += 1; 
+  }
+
 }
 
+function decrementCounter(counter,minvalue,targetdisplay){
+  while(counter >= minvalue){
+    if(targetdisplay.innerHTML != ""){
+      targetdisplay.innerHTML += " , ";
+    }
+     targetdisplay.innerHTML += counter ;
+     counter -= 10; 
+  }
+
+}
+
+function getLangauge(key, value){
+  let dataCount = 0;
+  let i= 0;
+  while(i < staff.length){
+     if(staff[i][key] > value){
+      dataCount ++;
+      }
+     i++;
+     }
+  return dataCount;
+  }
 
 
 

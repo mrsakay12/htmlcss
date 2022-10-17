@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Hands on JavaScript 4</title>
+    <script type="text/javascript" src="JS/kodego.js"></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+    <script src="js/bootstrap.min.js" type="javasript"></script>
+    <link href="css/style.css" rel="stylesheet">
+    <script src="js/kodego.js" type="javasript"></script>
+
+    </head>
+    <body >
+         <!-- Machine 1 -->
+    <div class="container justify-content-center border-secondary mt-3">
+    <h2 style="text-align:left ; color: black;">Hands on JavaScript 4</h2>
+    <h3 class="h5 mt-3" style="text-align:left ; color: black;">Machine Problem 1 </h3>
+
+    <div id="result"></div>
+
+   <h3 class="h5 mt-3" style="text-align:left ; color: black;">Machine Problem 2 </h3>
+   <div id="result1"></div>
+  
+ 
+   <script>
+
+    //machine 1
+
+    let numbers = [1, 1, 2, 2, 2, 3, 3, 4, 5, 5, 5, 5, 6, 6, 7, 7, 7, 8, 9, 9, 9];
+
+function countConTwo(){
+    let prevNumber = 0;
+    let totalConsecutive = 0;
+    let sequence = 1;
+    for(let i=0; i< numbers.length; i++){
+        if(prevNumber == numbers[i]){
+            sequence++;
+        }
+
+        if(sequence == 3){
+            totalConsecutive++;
+            sequence = 1;
+            prevNumber = 0;
+        }else{
+            prevNumber = numbers[i];   
+        }
+    }
+
+    return totalConsecutive;
+}
+
+
+console.log(countConTwo(numbers));
+document.getElementById('result').innerHTML = "The the number with the same value in a 2 consecutive order is " + countConTwo();
+
+
+    //Machine 2
+
+    function countConThree(){
+                let prevNumber = 0;
+                let totalConsecutive = 0;
+                let sequence = 0;
+                for(let i=0; i< numbers.length; i++){
+                    if(prevNumber == numbers[i]){
+                        sequence++;
+                    }else{
+                        sequence = 0;
+                    }
+
+                    if(sequence == (3 - 1)){
+                        totalConsecutive++;
+                        sequence = 0;
+                        prevNumber = 0;
+                    }else{
+                        prevNumber = numbers[i];   
+                    }
+                }
+
+                return totalConsecutive;
+            }
+
+            
+            console.log(countConThree());
+
+    document.getElementById('result1').innerHTML = "The the number with the same value in a 3 consecutive order is " + countConThree();
+
+    console.log(countConThree(numbers));
+
+
+   </script>
+   
+
+</div>
+    </body>
+</html>

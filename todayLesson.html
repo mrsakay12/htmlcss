@@ -117,8 +117,84 @@
                 }
             }
         </script>
-</div>
+ </div>
+   <div class="date mt-5" >
+   <h3 style="text-align:left"> While Loop </h3>
 
-</div>
+    <div id="result4"></div>
+    <div id="result5"></div>
+    <div id="result8"></div>
+    <div id="result9"></div>
+    <div id="result10"></div>
+
+     <script>
+         
+         let counter = 1; //initialization
+         while(counter <= 10){
+            //to do statement
+           //for checking console.log(counter); //
+            document.getElementById("result4").innerHTML += counter +",";
+            counter += 3; //lock for infinite loop
+         }
+         numberCounter(0,10,document.getElementById("result5")) //external code
+         decrementCounter(100,0,document.getElementById("result8")) 
+         let names = ["james","Rowen","Tim","Jessie","Maki","Eunice","Mark"]
+         let count =0;
+         while(names[count] != "Mark"){
+            document.getElementById("result9").innerHTML = count ;
+            count++;
+            console.log(names[count])
+        }
+    
+        let counts = 5;
+        do{
+            document.getElementById("result10").innerHTML += counts;
+            counts ++;
+        }while(counts <= 10);
+
+        let personalInfo = [
+            {first_name:"juan",
+             last_name:"Delacruz",
+             age: 24,
+             gender :"male" ,
+             job :"webdev" ,
+            },
+            {first_name:"anna",
+             last_name:"salvador",
+             age: 28,
+             gender : "female",
+             job : "webdev",
+            }
+            ,
+            {first_name:"Jose",
+             last_name:"salvador",
+             age: 28,
+             gender : "male",
+             job : "webdev",
+            }
+        ];
+        let genderCount = 0;
+            counter = 0;
+            while(counter < personalInfo.length){
+
+                if(personalInfo[counter].gender == "male"){
+                    genderCount++;
+                }
+
+                counter++;
+            }
+
+            console.log(genderCount);
+
+    </script>
+
+
+
+
+   
+
+
+   </div>
+   </div>
     </body>
 </html>
