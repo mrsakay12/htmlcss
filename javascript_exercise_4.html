@@ -30,13 +30,13 @@
 function countConTwo(){
     let prevNumber = 0;
     let totalConsecutive = 0;
-    let sequence = 1;
+    let sequence = 0;
     for(let i=0; i< numbers.length; i++){
         if(prevNumber == numbers[i]){
             sequence++;
         }
 
-        if(sequence == 3){
+        if(sequence == 2){
             totalConsecutive++;
             sequence = 1;
             prevNumber = 0;

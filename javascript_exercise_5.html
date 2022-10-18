@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Hands on JavaScript 5</title>
+    <script type="text/javascript" src="JS/kodego.js"></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+    <script src="js/bootstrap.min.js" type="javasript"></script>
+    <link href="css/style.css" rel="stylesheet">
+    <script src="js/kodego.js" type="javasript"></script>
+
+    </head>
+    <body >
+         <!-- Machine 1 -->
+    <div class="container justify-content-center border-secondary mt-3">
+    <h2 style="text-align:left ; color: black;">Hands on JavaScript 5</h2>
+    <h3 class="h5 mt-3" style="text-align:left ; color: black;">Machine Problem 1 </h3>
+
+    <div id="result"></div>
+    <input type="text" onkeyup="onKeyUphandler(event)" />
+
+
+   <h3 class="h5 mt-3" style="text-align:left ; color: black;">Machine Problem 2 </h3>
+   <div id="result1"></div>
+  
+ 
+   <script>
+ 
+ //machine 1
+
+ function nexNumberDivisible(number){
+    for (number; number<= number + 7; number++){
+        if (number % 7 == 0){
+            return number;
+        }
+    }
+ }
+
+ function onKeyUphandler(e) {
+    document.getElementById('result').innerHTML = nexNumberDivisible(
+        e.currentTarget.value
+    )
+ }
+
+    //Machine 2
+    let invoiceItems = [{description: "Mouse", Qty: 3, unitPrice: 200}, 
+                {description: "Keyboard", Qty: 3, unitPrice: 400},
+                {description: "Monitor", Qty: 6, unitPrice: 5400},
+                {description: "CPU Tower Case", Qty: 3, unitPrice: 1200},
+                {description: "Headset", Qty: 3, unitPrice: 500},
+                {description: "UPS", Qty: 1, unitPrice: 4000},];
+
+    let tableElem = "<div><table class='table'>";
+                tableElem += "<tr>";    
+                tableElem += "<th>Description</th>";    
+                tableElem += "<th>Qty</th>";    
+                tableElem += "<th>UnitPrice</th>";   
+                tableElem += "<th>Amount</th>";     
+                tableElem += "</tr>"; 
+                invoiceItems.forEach(function(value, index, array){
+                tableElem += "<tr>";    
+                tableElem += "<td>"+ value.description +"</td>";    
+                tableElem += "<td>"+ value.Qty +"</td>";    
+                tableElem += "<td>"+ value.unitPrice +"</td>"; 
+                tableElem += "<td>"+ value.unitPrice * value.Qty +"</td>";   
+                tableElem += "</tr>";    
+            });
+
+            document.getElementById("result1").innerHTML += tableElem + "</table></div>";
+
+
+   </script>
+   
+
+</div>
+    </body>
+</html>
