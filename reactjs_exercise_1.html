@@ -1,31 +1,49 @@
 <!DOCTYPE html>
 <html>
-    <head>
-    <title>reactjs_exercise_1</title>
-  
-    </head>
-    <body >
-        <h2 style="text-align:left ; color: black;">reactjs_exercise_1</h2>
- <div id="result"></div>
+<head>
+    
+    <title>Javascript Exercise</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <script type="text/javascript" src="js/kodego.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
     <script>
 
-class tocino{
-    constructor(brand,variant){
-        this.brand = brand;
-        this.variant = variant;
+        class Furniture {
+            constructor (type, wood){
+            this.type = type;
+            this.wood = wood;
+            }
+        }
 
-    }
-}
+        class ColorStyle extends Furniture {
+            constructor (woodFinish, color){
+            super("Table", "Narra");
+            this.woodFinish = woodFinish;
+            this.color = color;
+            }
 
-class CDO extends tocino
-constructor(brand,variant)
-    super(CDO,Chicken)
-    
-Class 
+        }
 
+        class PriceMinOrder extends ColorStyle {
+            constructor (price, minOrder){
+            super("Varnis", "Red");
+            this.price = price;
+            this.minOrder = minOrder;
+            }
+
+        }
+
+        let Table = new PriceMinOrder ("1700","1");
+
+        document.write(Table.wood);
 
     </script>
 
+</body>
 
-    </body>
 </html>
