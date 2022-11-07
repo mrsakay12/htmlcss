@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Data Types</title>
+    <script type="text/javascript" src="JS/kodego.js"></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+    <script src="js/bootstrap.min.js" type="javasript"></script>
+    <link href="css/style.css" rel="stylesheet">
+    <script src="js/kodego.js" type="javasript"></script>
+
+    </head>
+    <body >
+        <h2 style="text-align:left ; color: black;">String Method</h2>
+
+    <script>
+
+        let str = "hello world";
+        console.log(str.length);
+
+    //slice()
+    console.log(str.slice(-11,6));
+    console.log("example 1 " + str.slice(-10,-4));
+
+    //substring()
+    console.log(str.substring(0));
+  
+    //substr()
+    console.log("example substr " + str.substr(6,2));
+
+    //replace()
+    let paragraph = "create a funCtion that accepts a number and output the next number in sequence that is divisible by 7."
+    paragraph = paragraph.replace("function","method")
+    console.log("example replace - " +paragraph.replace("function","method"));
+    console.log("example replace - " +paragraph.replace("accepts","inputs"));
+    console.log("example replace - " +paragraph.replace(/number/g,"#"));
+    console.log("example replace - " +paragraph.replace(/Number/ig,"#"));
+
+    //To UpperCase to tolowercaser
+
+    console.log("example toUpperCase - " +paragraph.toUpperCase());
+    console.log("example toLowerCase - " +paragraph.toLowerCase());
+
+    
+
+
+    
+    // concat
+
+    console.log("example concat - "+ str.concat(" ","Hello Philipines"));
+    
+    //Trim
+    let strcode = "   TEST VALUE AND YOU            "
+    console.log("example Trim -"+ strcode.trim());
+    console.log("example trimStart -"+ strcode.trimStart());
+    console.log("example trimEnd -"+ strcode.trimEnd());
+
+    //001
+    //002
+    //padStart(length, char add) padEnd(length, char add)
+
+    console.log("1".padStart(8,"0"));
+
+    //charAt(position) charCodeat(position)
+
+    let char="create a function.that"
+    console.log("example charAt -"+ char.charAt(7));
+    console.log("example charCodeat -"+ char.charCodeAt(7));
+
+    //Split(seperator)
+    let words = char.split(" ");
+    console.log(char.split(" "));
+
+    //indexof(keyword)
+    console.log(paragraph.indexOf("number", 20));
+    console.log(paragraph.lastIndexOf("number", 33));
+
+    //search(keyword)
+    console.log(paragraph.search("7"));
+
+    //match
+    console.log(paragraph.match(/number/ig));
+
+    </script>
+
+
+<h2 style="text-align:left ; color: black;">Number metthods</h2>
+<script>
+let number1 = 123.45;
+
+//Number toString()
+console.log(number1.toString() + 60);
+
+//to exponential
+
+console.log(number1.toExponential(5));
+
+//toFixed
+console.log(number1.toFixed(1));
+
+// toPrecision()
+let num = 13.6714;
+console.log(num.toPrecision(2));
+console.log(num.toPrecision(4));
+
+
+
+</script>
+
+<div id="result101"></div>
+<div id="result102"></div>
+
+<script>
+    let quote = "To know how much there is to know is the beginning of learning to live.";
+    let lotto = [18,9,54,36,45,27];
+
+
+    lotto.splice(4, 0, "9", "10");
+    document.getElementById("result101").innerHTML = lotto;
+
+
+    document.getElementById('result102').innerHTML = quote.replace(/know/ig,"Learn");
+ 
+
+</script>
+
+
+    </body>
+</html>
